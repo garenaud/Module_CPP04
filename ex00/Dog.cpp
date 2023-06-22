@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 18:29:03 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/22 12:34:01 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/22 13:19:47 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ void	Dog::setType(std::string const _type)
 
 void	Dog::makeSound(void) const
 {
-	std::cout << "Meow Meow" << std::endl;
+	std::cout << "Wouaf Wouaf" << std::endl;
 }
