@@ -6,11 +6,11 @@
 #    By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/21 15:23:50 by grenaud-          #+#    #+#              #
-#    Updated: 2023/06/21 15:23:53 by grenaud-         ###   ########.fr        #
+#    Updated: 2023/06/22 12:30:53 by grenaud-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Animal.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
