@@ -24,13 +24,11 @@ class Brain
 	public:
 		Brain(void);
 		virtual ~Brain(void);
-		Brain(std::string const &type);
+		Brain(std::string const &_ideas);
 		Brain(Brain const &rhs);
 		Brain	&operator=(Brain const &rhs);
 
-		virtual void	makeSound() const;
-		std::string		getType(void) const;
-		void			setType(std::string const type);	
+		//std::string	getIdeas(void) const;
 };
 
 #endif

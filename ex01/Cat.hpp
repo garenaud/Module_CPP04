@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 18:28:45 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 13:50:29 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/23 14:12:51 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Cat: public Animal
 		Cat	&operator=(Cat const &rhs);
 
 		void			makeSound() const;
-		void			*getBrain(void) const;
+		Brain			*getBrain(void) const;
 		std::string		getType(void) const;
 		void			setType(std::string const _type);	
 };

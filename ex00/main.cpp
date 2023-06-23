@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 15:20:06 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/22 13:20:44 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:07:01 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,9 @@ int		main()
 	const Animal* j = new Dog("gus");
 	const WrongAnimal* i = new WrongCat();
 	const Animal* h = new Cat();
-	//meta->setType("Dog");
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
+	i->makeSound();
 	j->makeSound();
 	h->makeSound();
 	meta->makeSound();
