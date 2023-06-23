@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 18:28:45 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/22 12:26:13 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/23 13:54:06 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ class Cat: public Animal
 		Cat(void);
 		~Cat(void);
 		Cat(std::string const &_type);
-		Cat(Cat const &copy);
-		Cat	&operator=(Cat const &copy);
+		Cat(Cat const &rhs);
+		Cat	&operator=(Cat const &rhs);
 
-		virtual void	makeSound() const;
+		void	makeSound() const;
 		std::string		getType(void) const;
 		void			setType(std::string const _type);	
 };

@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/21 14:30:47 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 13:53:41 by grenaud-         ###   ########.fr       */
+/*   Created: 2023/06/21 18:28:45 by grenaud-          #+#    #+#             */
+/*   Updated: 2023/06/23 13:51:00 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
+#ifndef DOG_HPP
 
-# define ANIMAL_HPP
+# define DOG_HPP
 
+# include "Animal.hpp"
 # include <iostream>
 
-class Animal
+class Dog: public Animal
 {
 	protected:
 		std::string	type;
 	
 	public:
-		Animal(void);
-		virtual ~Animal(void);
-		Animal(std::string const &type);
-		Animal(Animal const &rhs);
-		Animal	&operator=(Animal const &rhs);
+		Dog(void);
+		~Dog(void);
+		Dog(std::string const &_type);
+		Dog(Dog const &rhs);
+		Dog	&operator=(Dog const &rhs);
 
 		virtual void	makeSound() const;
 		std::string		getType(void) const;
-		void			setType(std::string const type);	
+		void			setType(std::string const _type);	
 };
 
 #endif

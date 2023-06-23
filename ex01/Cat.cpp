@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 18:29:03 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 13:53:51 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/23 13:50:20 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cat::Cat(void): type("Cat")
 {
+	this->brain = new Brain;
 	std::cout << "\033[103mCat [" << this->type << "] created with default constructor.\033[0m" << std::endl;
 }
 
@@ -53,4 +54,9 @@ void	Cat::setType(std::string const _type)
 void	Cat::makeSound(void) const
 {
 	std::cout << "Meow Meow" << std::endl;
+}
+
+void	Cat::getBrain(void) const
+{
+	
 }
