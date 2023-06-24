@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 18:28:45 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 16:35:24 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/23 14:12:51 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
+#ifndef CAT_HPP
 
-# define DOG_HPP
+# define CAT_HPP
 
 # include "Animal.hpp"
 # include "Brain.hpp"
 # include <iostream>
 
-class Dog: public Animal
+class Cat: public Animal
 {
 	protected:
 		std::string	type;
 		Brain	*brain;
 	
 	public:
-		Dog(void);
-		~Dog(void);
-		Dog(std::string const &_type);
-		Dog(Dog const &rhs);
-		Dog	&operator=(Dog const &rhs);
+		Cat(void);
+		~Cat(void);
+		Cat(std::string const &_type);
+		Cat(Cat const &rhs);
+		Cat	&operator=(Cat const &rhs);
 
-		virtual void	makeSound() const;
+		void			makeSound() const;
 		Brain			*getBrain(void) const;
 		std::string		getType(void) const;
 		void			setType(std::string const _type);	

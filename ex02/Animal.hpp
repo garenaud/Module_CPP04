@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/21 18:28:45 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 16:35:24 by grenaud-         ###   ########.fr       */
+/*   Created: 2023/06/21 14:30:47 by grenaud-          #+#    #+#             */
+/*   Updated: 2023/06/23 16:44:54 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
+#ifndef ANIMAL_HPP
 
-# define DOG_HPP
+# define ANIMAL_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
 # include <iostream>
 
-class Dog: public Animal
+class Animal
 {
 	protected:
 		std::string	type;
-		Brain	*brain;
 	
 	public:
-		Dog(void);
-		~Dog(void);
-		Dog(std::string const &_type);
-		Dog(Dog const &rhs);
-		Dog	&operator=(Dog const &rhs);
+		Animal(void);
+		virtual ~Animal(void);
+		Animal(std::string const &type);
+		Animal(Animal const &rhs);
+		Animal	&operator=(Animal const &rhs);
 
-		virtual void	makeSound() const;
-		Brain			*getBrain(void) const;
+		virtual void	makeSound() const = 0;
 		std::string		getType(void) const;
-		void			setType(std::string const _type);	
+		void			setType(std::string const type);	
 };
 
 #endif
