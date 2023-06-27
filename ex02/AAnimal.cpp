@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,47 +10,47 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal(void): type("default")
+AAnimal::AAnimal(void): type("default")
 {
-	std::cout << "\033[102mAnimal [" << this->type << "] created with default constructor.\033[0m" << std::endl;
+	std::cout << "\033[102mAAnimal [" << this->type << "] created with default constructor.\033[0m" << std::endl;
 }
 
-Animal::Animal(std::string const &_type): type(_type)
+AAnimal::AAnimal(std::string const &_type): type(_type)
 {
-	std::cout << "\033[102mAnimal [" << this->type << "] created.\033[0m" << std::endl;
+	std::cout << "\033[102mAAnimal [" << this->type << "] created.\033[0m" << std::endl;
 }
 
-Animal::~Animal(void)
+AAnimal::~AAnimal(void)
 {
-	std::cout << "\033[102mAnimal [" << this->type << "] destroyed.\033[0m" << std::endl;
+	std::cout << "\033[102mAAnimal [" << this->type << "] destroyed.\033[0m" << std::endl;
 }
 
-Animal::Animal(Animal const &rhs)
+AAnimal::AAnimal(AAnimal const &rhs)
 {
-	std::cout << "\033[102mAnimal [" << this->type << "] copied.\033[0m" << std::endl;
+	std::cout << "\033[102mAAnimal [" << this->type << "] copied.\033[0m" << std::endl;
 	*this = rhs;
 }
 
-Animal	&Animal::operator=(Animal const &rhs)
+AAnimal	&AAnimal::operator=(AAnimal const &rhs)
 {
-	std::cout << "\033[102mAssignment operator For Animal called.\033[0m" << std::endl;
+	std::cout << "\033[102mAssignment operator For AAnimal called.\033[0m" << std::endl;
 	this->type = rhs.getType();
 	return (*this);
 }
 
-std::string	Animal::getType(void) const
+std::string	AAnimal::getType(void) const
 {
 	return (this->type);
 }
 
-void	Animal::setType(std::string const _type)
+void	AAnimal::setType(std::string const _type)
 {
 	this->type = _type;
 }
 
-void	Animal::makeSound(void) const
+void	AAnimal::makeSound(void) const
 {
-	std::cout << "Default Animal Sound" << std::endl;
+	std::cout << "Default AAnimal Sound" << std::endl;
 }

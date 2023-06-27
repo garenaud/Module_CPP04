@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 18:28:45 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 16:35:24 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/27 15:27:14 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 # include <iostream>
 
-class Dog: public Animal
+class Dog: public AAnimal
 {
 	protected:
 		std::string	type;
