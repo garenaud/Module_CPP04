@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 17:28:18 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/27 17:28:46 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/28 13:51:01 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ class Character : public ICharacter
 		
 	public:
 		Character(std::string name);
-		Character(Character const & ref);
+		Character(Character const &rhs);
 		~Character();
-		Character & operator=(Character const & ref);
-		std::string const & getName() const;
+		Character & operator=(Character const &rhs);
+		const std::string &getName() const;
 		void equip(AMateria *m);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);

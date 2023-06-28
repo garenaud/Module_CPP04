@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Amateria.cpp                                       :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 15:43:34 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/27 17:40:00 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/28 13:16:20 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ AMateria::AMateria(std::string const &type)
 
 AMateria::~AMateria(void)
 {
-	std::cout << "AMateria [" << this->type << "] destroyed." << std::endl;
+	std::cout << "AMateria [" << this->_type << "] destroyed." << std::endl;
 }
 
 AMateria &AMateria::operator=(AMateria const &rhs)
@@ -36,7 +36,7 @@ AMateria &AMateria::operator=(AMateria const &rhs)
 	return (*this);
 }
 
-std::string	AMateria::getType(void) const
+const std::string	&AMateria::getType(void) const
 {
 	return (this->_type);
 }
