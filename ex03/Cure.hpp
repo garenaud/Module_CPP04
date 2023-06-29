@@ -6,14 +6,14 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 13:07:51 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/28 13:28:28 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/28 15:22:29 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CURE_HPP
 # define CURE_HPP
 
-#include "AMateria.hpp"
+# include "AMateria.hpp"
 
 class Cure : public AMateria
 {

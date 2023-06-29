@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 13:09:10 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/28 13:42:53 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/28 15:14:55 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cure::Cure(void)
 {
-	this->_type = "default";
+	this->_type = "Cure";
 	std::cout << "💊 Cure [" << this->_type << "] created with default constructor" << std::endl;
 }
 
