@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 17:47:47 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/29 13:26:55 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/29 15:23:39 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ const std::string	&Character::getName(void) const
 
 Character	&Character::operator=(Character const &rhs)
 {
-	this->_name = rhs.getName();
+	//this->_name = rhs.getName();
 	for (int i = 0; i < 4; i++)
 	{
 		if (this->_inventory[i])
@@ -43,13 +43,13 @@ Character	&Character::operator=(Character const &rhs)
 	return (*this);
 }
 
-Character::Character(Character const &rhs)
+Character::Character(Character const &rhs): _name(rhs.getName() + "_copy")
 {
-	this->_name = rhs.getName() + "_copy";
+	//this->_name = rhs.getName() + "_copy";
 	for(int i = 0; i < 4; i++)
 	{
 		if (rhs._inventory[i])
-			this->_inventory[i] = (rhs._inventory[i])->clonbe();
+			this->_inventory[i] = (rhs._inventory[i])->clone();
 	}
 	std::cout << "🧙‍♂️ Character [" << this->_name << "] copied." << std::endl;
 }

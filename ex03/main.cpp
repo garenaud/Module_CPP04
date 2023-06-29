@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 15:18:21 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/29 13:31:13 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/29 16:09:02 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,6 @@ int main()
 	// Leaks check
 	std::cout << "LEAKS:" << std::endl;
 	std::cout << "-----------------------" << std::endl;
-	system("leaks ex03");
+	system("leaks AMateria");
 	return (0);
 }

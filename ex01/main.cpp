@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 15:20:06 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 16:33:59 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/29 15:41:09 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ int		main()
 	Animal	*tabAnimal[size];
 /* 	Animal *Joe = new Cat();
 	Animal *suzie = new Cat("Suzie"); */
+	std::cout << std::endl << std::endl;
 	Cat	Basic;
 	{
 		Cat tmp = Basic;
 	}
+	std::cout << std::endl << std::endl;
 /* 	Joe->makeSound();
 	suzie->makeSound();
 	suzie = Joe; */

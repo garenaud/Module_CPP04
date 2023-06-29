@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 17:28:18 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/29 14:04:18 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/29 15:28:00 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 # define CHARACTER_HPP
 
 # include "ICharacter.hpp"
-# include "AMateria.hpp"
+//class ICharacter;
 
 class Character : public ICharacter
 {
 	private:
 		AMateria			*(_inventory[4]);
-		std::string			_name;
+		std::string	const	_name;
 		
 	public:
 		Character(std::string name);

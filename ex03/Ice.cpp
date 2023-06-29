@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 15:19:35 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/28 15:27:14 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/29 15:31:39 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ Ice::Ice(Ice const &rhs)
 
 Ice	&Ice::operator=(Ice const &rhs)
 {
-	std::cout << "❄️ Assignment operator For Ice called." << std::endl;
+	std::cout << "Assigned from " << rhs.getType() << std::endl;
+	return (*this);
 }
 
 const std::string	&Ice::getType(void) const
