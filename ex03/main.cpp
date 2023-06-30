@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 15:18:21 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/29 16:09:02 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/30 09:34:31 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,24 @@
 #include "Ice.hpp"
 #include "MateriaSource.hpp"
 
-void ft_tests()
+int	main()
+{
+	IMateriaSource *sort = new MateriaSource;
+	sort->learnMateria(new Ice());
+	sort->learnMateria(new Cure());
+	ICharacter *Joe = new Character("Joe");
+	ICharacter *Bil = new Character("Bil");
+	AMateria	*tmp;
+/* 	AMateria	*tmp1;
+	AMateria	*tmp2;
+	AMateria	*tmp3;
+	AMateria	*tmp4; */
+	tmp = sort->createMateria("ice");
+	Joe->equip(tmp);
+	Joe->use(0, *Bil);
+	return (0);
+}
+/* void ft_tests()
 {
 	// Constructors
 	std::cout << std::endl;
@@ -130,3 +147,4 @@ int main()
 	system("leaks AMateria");
 	return (0);
 }
+ */
