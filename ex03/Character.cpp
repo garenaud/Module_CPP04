@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 17:47:47 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/30 09:37:10 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:30:40 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Character::Character(std::string name): _name(name)
 	for(int i = 0; i < 4; i++)
 	{
 		this->_inventory[i] = 0;
+		//std::cout << this->_inventory[i] << std::endl;
 	}
 }
 
@@ -80,8 +81,9 @@ void	Character::equip(AMateria *m)
 		std::cout << this->_name << " can't equip more than 4 Materia";
 		return ;
 	}
+	//std::cout << "\033[102m" << this->_inventory[i] << "\033[0m" << std::endl;
 	(this->_inventory)[i] = m;
-	std::cout << this->_name << " equipped materia " << m->getType() << " in slot " << i << "\n";
+	std::cout << "🧙‍♂️ " << this->_name << " equipped materia 🔮 " << m->getType() << " in slot " << i << " 📥"<< "\n";
 }
 
 void	Character::unequip(int idx)
@@ -93,7 +95,7 @@ void	Character::unequip(int idx)
 	else
 	{
 		AMateria *ptr = (this->_inventory)[idx];
-		std::cout << this->_name << " unequipped " << ptr->getType() << " at slot "<< idx << std::endl;
+		std::cout << "🧙‍♂️ " << this->_name << " unequipped " << ptr->getType() << " at slot "<< idx << " 📤" << std::endl;
 		(this->_inventory)[idx] = 0;
 	}
 }

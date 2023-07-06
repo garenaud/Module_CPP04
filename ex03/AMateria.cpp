@@ -6,27 +6,25 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 15:43:34 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/29 15:37:27 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:59:44 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(void): _type("default")
+AMateria::AMateria(void)
 {
-	//this->_type = "default";
-	std::cout << "AMateria [" << this->_type << "] created with default constructor" << std::endl;
+	std::cout << "🔮 Abstract materia has been created" << std::endl;
 }
 
 AMateria::AMateria(std::string const &type): _type(type)
 {
-	//this->_type = type;
-	std::cout << "AMateria [" << this->_type << "] created" << std::endl;
+	std::cout << "🔮 Abstract materia has been created" << std::endl;
 }
 
 AMateria::~AMateria(void)
 {
-	std::cout << "Abstract AMateria destroyed." << std::endl;
+	std::cout << "🔮 Abstract AMateria destroyed." << std::endl;
 }
 
 /* AMateria &AMateria::operator=(AMateria const &rhs): _type(rhs._type)
@@ -38,7 +36,7 @@ AMateria::~AMateria(void)
 
 AMateria::AMateria(AMateria const &ref) : _type(ref._type)
 {
-	std::cout << "Abstract materia has beed constructed from a copy\n";
+	std::cout << "🔮 Abstract materia has been constructed from a copy\n";
 }
 
 const std::string	&AMateria::getType(void) const

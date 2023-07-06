@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 15:18:21 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/30 09:34:31 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:42:56 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 #include "Cure.hpp"
 #include "Ice.hpp"
 #include "MateriaSource.hpp"
+#include "IMateriaSource.hpp"
+#include "ICharacter.hpp"
 
-int	main()
+/* int	main()
 {
 	IMateriaSource *sort = new MateriaSource;
 	sort->learnMateria(new Ice());
@@ -24,16 +26,19 @@ int	main()
 	ICharacter *Joe = new Character("Joe");
 	ICharacter *Bil = new Character("Bil");
 	AMateria	*tmp;
-/* 	AMateria	*tmp1;
+ 	AMateria	*tmp1;
 	AMateria	*tmp2;
 	AMateria	*tmp3;
-	AMateria	*tmp4; */
-	tmp = sort->createMateria("ice");
+	AMateria	*tmp4;
+	tmp = sort->createMateria("Ice");
+	tmp1 = sort->createMateria("Cure");
 	Joe->equip(tmp);
 	Joe->use(0, *Bil);
+	Bil->equip(tmp1);
+	Bil->use(1, *Bil);
 	return (0);
-}
-/* void ft_tests()
+} */
+ void ft_tests()
 {
 	// Constructors
 	std::cout << std::endl;
@@ -147,4 +152,3 @@ int main()
 	system("leaks AMateria");
 	return (0);
 }
- */

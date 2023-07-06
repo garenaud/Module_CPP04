@@ -6,15 +6,14 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 13:09:10 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/29 15:30:09 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/06/30 16:57:18 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(void)
+Cure::Cure(void): _type("cure")
 {
-	this->_type = "Cure";
 	std::cout << "💊 Cure [" << this->_type << "] created with default constructor" << std::endl;
 }
 
@@ -31,7 +30,7 @@ Cure::Cure(Cure const &rhs)
 
 Cure	&Cure::operator=(Cure const &rhs)
 {
-	std::cout << "Assigned from " << rhs.getType() << std::endl;
+	std::cout << "💊 Assigned from " << rhs.getType() << std::endl;
 	return (*this);
 }
 

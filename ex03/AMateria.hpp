@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 15:43:22 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/29 15:29:01 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/07/06 13:07:12 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AMateria
 		virtual ~AMateria();
 		AMateria(AMateria const & ref);
 		//AMateria			&operator=(AMateria const &rhs);
-		const std::string 	&getType() const; //Returns the materia type
+		virtual std::string const	&getType() const; //Returns the materia type
 		virtual 			AMateria *clone() const = 0;
 		virtual void 		use(ICharacter& target);
 };
