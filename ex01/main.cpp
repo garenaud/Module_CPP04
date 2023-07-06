@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 15:20:06 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/29 15:41:09 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/07/06 18:14:45 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,54 @@
 
 int		main()
 {
-	const int size = 10;
-	Animal	*tabAnimal[size];
-/* 	Animal *Joe = new Cat();
-	Animal *suzie = new Cat("Suzie"); */
-	std::cout << std::endl << std::endl;
-	Cat	Basic;
-	{
-		Cat tmp = Basic;
-	}
-	std::cout << std::endl << std::endl;
-/* 	Joe->makeSound();
-	suzie->makeSound();
-	suzie = Joe; */
-	//Cat *Suzie = new Cat(&Joe);
-	for (int i = 0; i < size; i++)
-	{
-		if (i < size / 2)
-			tabAnimal[i] = new Cat;
-		else
-			tabAnimal[i] = new Dog;
-	}
-	for (int i = 0; i < size; i++)
-		delete tabAnimal[i];
-/* 	delete Joe;
-	delete suzie; */
+	// Exercice example
+	const Animal* dog = new Dog();
+	const Animal* cat = new Cat();
+
+	std::cout << std::endl;
+
+	delete dog;
+	delete cat;
+	system("leaks ex01");
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	// Proof of deep copy
+	Dog medor;
+	Cat fifi;
+
+	Dog & medor_ref = medor;
+	Cat & fifi_ref = fifi;
+
+	std::cout << std::endl << "creating copies" << std::endl;
+	Dog medor_copy(medor_ref);
+	Cat fifi_copy(fifi_ref);
+
+	Dog & medor_copy_ref = medor_copy;
+	Cat & fifi_copy_ref = fifi_copy;
+
+	std::cout << std::endl << "comparing" << std::endl;
+	medor.compareTo(medor_copy_ref);
+	fifi.compareTo(fifi_copy_ref);
+	std::cout << std::endl;
+
+
+	// Array of animals
+	const Animal	*(animal_array[4]);
+	std::cout << std::endl;
+	// Half filled with dogs
+	for (int i = 0; i < 2; i++)
+		animal_array[i] = new Dog();
+	std::cout << std::endl;
+
+	// Half filled with cats
+	for (int i = 2; i < 4; i++)
+		animal_array[i] = new Cat();
+	std::cout << std::endl;
+
+	for (int i = 0; i < 4; i++)
+		delete animal_array[i];
+	std::cout << std::endl;
+	system("leaks Animal");
 	return 0;
 }

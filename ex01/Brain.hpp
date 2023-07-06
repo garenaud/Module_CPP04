@@ -28,7 +28,7 @@ class Brain
 		Brain(Brain const &rhs);
 		Brain	&operator=(Brain const &rhs);
 
-		//std::string	getIdeas(void) const;
+		std::string		*getIdeas(void);
 };
 
 #endif

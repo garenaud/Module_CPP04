@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 13:09:10 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/30 16:57:18 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/07/06 18:24:48 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,5 @@ Cure	*Cure::clone() const
 void	Cure::use(ICharacter &target)
 {
 	std::string	targetName = target.getName();
-	std::cout << " heals " << targetName << "\'s wounds" << std::endl;
+	std::cout << "* heals " << targetName << "\'s wounds *" << std::endl;
 }

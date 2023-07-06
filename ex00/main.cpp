@@ -20,13 +20,15 @@ int		main()
 {
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog("gus");
-	const WrongAnimal* i = new WrongCat();
-	const Animal* h = new Cat();
+	const WrongAnimal* i = new WrongCat("Rafia");
+	const WrongCat* suzie = new WrongCat("Suzie");
+	const Animal* h = new Cat("Tiki");
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
 	i->makeSound();
 	j->makeSound();
 	h->makeSound();
+	suzie->makeSound();
 	meta->makeSound();
 	delete meta;
 	delete j;

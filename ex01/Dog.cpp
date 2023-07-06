@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 18:29:03 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 16:39:44 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/07/06 18:13:26 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,20 @@ void	Dog::makeSound(void) const
 Brain	*Dog::getBrain(void) const
 {
 	return (this->brain);
+}
+
+void Dog::compareTo(Dog const & other_dog) const
+{
+	std::cout << std::endl;
+	std::cout << "Now comparing two dogs\n";
+	std::cout << "My brain's heap address: " << static_cast<void*>(this->brain) << std::endl;
+	std::cout << "Other's heap address: " << static_cast<void*>(other_dog.getBrain()) << std::endl;
+	std::cout << std::endl;
+	std::cout << "My brain's ideas \t\t | \t\t\t Other brain's ideas\n";
+	for (int i = 0; i < 100; i++)
+		std::cout << "-";
+	std::cout << std::endl;
+	for (int i = 0; i < 100; i++)
+		std::cout << ((this->brain)->getIdeas())[i] << "\t\t\t | \t\t\t" << ((other_dog.getBrain())->getIdeas())[i] << std::endl;
+	std::cout << std::endl;
 }

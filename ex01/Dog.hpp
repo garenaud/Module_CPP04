@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 18:28:45 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/06/23 16:35:24 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/07/06 18:13:53 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ class Dog: public Animal
 		virtual void	makeSound() const;
 		Brain			*getBrain(void) const;
 		std::string		getType(void) const;
-		void			setType(std::string const _type);	
+		void			setType(std::string const _type);
+		void 			compareTo(Dog const & other_dog) const;
 };
 
 #endif

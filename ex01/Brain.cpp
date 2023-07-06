@@ -46,8 +46,8 @@ Brain	&Brain::operator=(Brain const &rhs)
 		this->ideas[i] = rhs.ideas[i];
 	return (*this);
 }
-/* 
-std::string	Brain::getIdeas(void) const
+
+std::string	*Brain::getIdeas(void)
 {
-	return (this->ideas[100]);
-} */
+	return (this->ideas);
+}
